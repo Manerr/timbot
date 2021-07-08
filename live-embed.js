@@ -25,23 +25,23 @@ class LiveEmbed {
 
     if (isLive) {
       // Title
-      msgEmbed.setTitle(`:red_circle: **${streamData.user_name} is live on Twitch!**`);
-      msgEmbed.addField("Title", streamData.title, false);
+      msgEmbed.setTitle(`:red_circle: **${streamData.user_name} est en live sur Twitch !**`);
+      msgEmbed.addField("Titre", streamData.title, false);
     } else {
-      msgEmbed.setTitle(`:white_circle: ${streamData.user_name} was live on Twitch.`);
-      msgEmbed.setDescription('The stream has now ended.');
+      msgEmbed.setTitle(`:white_circle: ${streamData.user_name} était en live sur Twitch.`);
+      msgEmbed.setDescription('Le stream est terminé.');
 
-      msgEmbed.addField("Title", streamData.title, true);
+      msgEmbed.addField("Titre", streamData.title, true);
     }
 
     // Add game
     if (streamData.game) {
-      msgEmbed.addField("Game", streamData.game.name, false);
+      msgEmbed.addField("Jeu", streamData.game.name, false);
     }
 
     if (isLive) {
       // Add status
-      msgEmbed.addField("Status", isLive ? `Live with ${streamData.viewer_count} viewers` : 'Stream has ended', true);
+      msgEmbed.addField("Statut", isLive ? `En live avec ${streamData.viewer_count} viewers` : 'Le stream est terminé', true);
 
       // Set main image (stream preview)
       let imageUrl = streamData.thumbnail_url;
@@ -55,7 +55,8 @@ class LiveEmbed {
       let now = moment();
       let startedAt = moment(streamData.started_at);
 
-      msgEmbed.addField("Uptime", humanizeDuration(now - startedAt, {
+      msgEmbed.addField("Depuis", humanizeDuration(now - startedAt, {
+        language: "fr",	
         delimiter: ", ",
         largest: 2,
         round: true,
