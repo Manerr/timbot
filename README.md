@@ -12,11 +12,7 @@
 
 ## Using the bot
 
-You have two options:
-
-1. You can [invite the instance I'm running](https://discordapp.com/oauth2/authorize?client_id=411670773330345984&scope=bot) to your server for monotonetim's twitch channels (it announces to `#stream-announcements`). This bot may not always be available, and it may do silly extra things sometimes.
-
-2. Or, run your own copy by following the instructions below, and customize it however you want.
+Run your own copy by following the instructions below, and customize it however you want.
 
 ## Installation and setup
 
@@ -30,9 +26,9 @@ https://nodejs.org/en/download/
 
 ### Installation
 
-To set up Timbot, download the latest [repository ZIP](https://github.com/roydejong/timbot/archive/master.zip) or clone it using `git`:
+To set up Timbot, download the latest [repository ZIP](https://github.com/Manerr/timbot/archive/master.zip) or clone it using `git`:
 
-    git clone git@github.com:roydejong/timbot.git
+    git clone https://github.com/Manerr/timbot.git
     
 Once installed, enter the directory and install the dependencies:
 
